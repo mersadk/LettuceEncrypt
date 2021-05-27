@@ -31,6 +31,8 @@ LettuceEncrypt.LettuceEncryptOptions.EmailAddress.get -> string!
 LettuceEncrypt.LettuceEncryptOptions.EmailAddress.set -> void
 LettuceEncrypt.LettuceEncryptOptions.FallbackCertificate.get -> System.Security.Cryptography.X509Certificates.X509Certificate2?
 LettuceEncrypt.LettuceEncryptOptions.FallbackCertificate.set -> void
+LettuceEncrypt.LettuceEncryptOptions.FallbackDomainName.get -> string!
+LettuceEncrypt.LettuceEncryptOptions.FallbackDomainName.set -> void
 LettuceEncrypt.LettuceEncryptOptions.KeyAlgorithm.get -> LettuceEncrypt.KeyAlgorithm
 LettuceEncrypt.LettuceEncryptOptions.KeyAlgorithm.set -> void
 LettuceEncrypt.LettuceEncryptOptions.LettuceEncryptOptions() -> void

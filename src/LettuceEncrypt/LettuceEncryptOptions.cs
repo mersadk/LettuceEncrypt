@@ -57,6 +57,13 @@ namespace LettuceEncrypt
         public X509Certificate2? FallbackCertificate { get; set; }
 
         /// <summary>
+        /// A domain name to use if it's not provided by ASP.NET Core.
+        /// This will happen always when hosted on net461 or newer.
+        /// More info at https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel/endpoints?view=aspnetcore-5.0#sni-requirements
+        /// </summary>
+        public string FallbackDomainName { get; set; } = string.Empty;
+
+        /// <summary>
         /// How long before certificate expiration will be renewal attempted.
         /// Set to <c>null</c> to disable automatic renewal.
         /// </summary>

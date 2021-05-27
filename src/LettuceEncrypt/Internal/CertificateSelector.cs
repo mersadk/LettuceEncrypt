@@ -76,6 +76,12 @@ namespace LettuceEncrypt.Internal
 
         public X509Certificate2? Select(ConnectionContext context, string? domainName)
         {
+            if (String.IsNullOrWhiteSpace(domainName) && !String.IsNullOrWhiteSpace(_options.Value.FallbackDomainName))
+            {
+                domainName = _options.Value.FallbackDomainName;
+                _logger.LogDebug($"Using fallback domain name '{domainName}'.");
+            }
+
 #if NETCOREAPP3_1
             if (_challengeCerts.Count > 0)
             {
